@@ -3,30 +3,30 @@ global deletem = function()
 	local x = 1
 	local y = 1
 	local z = 0
-	for i to 5
-		for y to 5
+	for i=1, 5 do
+		for y=1, 5 do
 			minetest.set_node({x, y, z}{name="air"})
 		end
 		x = x + 1
 	end
 	x = -1
-	for i to 5
-		for y to 5
+	for i=1, 5 do
+		for y=1, 5 do
 			minetest.set_node({x, y, z}{name="air"})
 		end
 		x = x - 1
 	end
 	x = 0
 	z = 1
-	for i to 5
-		for y to 5
+	for i=1, 5 do
+		for y=1, 5 do
 			minetest.set_node({x, y, z}{name="air"})
 		end
 		z = z + 1
 	end
 	z = -1
-	for i to 5
-		for y to 5
+	for i=1, 5 do
+		for y=1, 5 do
 			minetest.set_node({x, y, z}{name="air"})
 		end
 		z = z - 1
@@ -37,30 +37,30 @@ global placem = function()
 	local x = 1
 	local y = 1
 	local z = 0
-	for i to 5
-		for y to 5
+	for i=1, 5 do
+		for y=1, 5 do
 			minetest.set_node({x, y, z}{name="default:cobblestone"})
 		end
 		x = x + 1
 	end
 	x = -1
-	for i to 5
-		for y to 5
+	for i=1, 5 do
+		for y=1, 5 do
 			minetest.set_node({x, y, z}{name="default:cobblestone"})
 		end
 		x = x - 1
 	end
 	x = 0
 	z = 1
-	for i to 5
-		for y to 5
+	for i=1, 5 do
+		for y=1, 5 do
 			minetest.set_node({x, y, z}{name="default:cobblestone"})
 		end
 		z = z + 1
 	end
 	z = -1
-	for i to 5
-		for y to 5
+	for i=1, 5 do
+		for y=1, 5 do
 			minetest.set_node({x, y, z}{name="default:cobblestone"})
 		end
 		z = z - 1
@@ -76,5 +76,4 @@ minetest.register_on_dieplayer(function(player)
 		end
 		table.remove(playingplayers, x)
 	end
-return true
-end
+end)
