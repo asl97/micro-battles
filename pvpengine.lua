@@ -1,79 +1,26 @@
 --delete blocks
-global deletem = function()
-	local x = 1
-	local y = 1
-	local z = 0
-	for i=1, 5 do
-		for y=1, 5 do
-			minetest.set_node({x, y, z}{name="air"})
+deletem = function()
+	for x=-5,5 do
+		for y=-5,5 do
+			for z=-5,5 do
+				minetest.remove_node({x=x,y=y,z=z})
+			end
 		end
-		x = x + 1
-	end
-	x = -1
-	for i=1, 5 do
-		for y=1, 5 do
-			minetest.set_node({x, y, z}{name="air"})
-		end
-		x = x - 1
-	end
-	x = 0
-	z = 1
-	for i=1, 5 do
-		for y=1, 5 do
-			minetest.set_node({x, y, z}{name="air"})
-		end
-		z = z + 1
-	end
-	z = -1
-	for i=1, 5 do
-		for y=1, 5 do
-			minetest.set_node({x, y, z}{name="air"})
-		end
-		z = z - 1
 	end
 end
 --place blocks
-global placem = function()
-	local x = 1
-	local y = 1
-	local z = 0
-	for i=1, 5 do
-		for y=1, 5 do
-			minetest.set_node({x, y, z}{name="default:cobblestone"})
+placem = function()
+	for x=-5,5 do
+		for y=-5,5 do
+			for z=-5,5 do
+				minetest.set_node({x, y, z}{name="default:cobblestone"})
+			end
 		end
-		x = x + 1
-	end
-	x = -1
-	for i=1, 5 do
-		for y=1, 5 do
-			minetest.set_node({x, y, z}{name="default:cobblestone"})
-		end
-		x = x - 1
-	end
-	x = 0
-	z = 1
-	for i=1, 5 do
-		for y=1, 5 do
-			minetest.set_node({x, y, z}{name="default:cobblestone"})
-		end
-		z = z + 1
-	end
-	z = -1
-	for i=1, 5 do
-		for y=1, 5 do
-			minetest.set_node({x, y, z}{name="default:cobblestone"})
-		end
-		z = z - 1
 	end
 end
+
 --a part of the pvp engine
 minetest.register_on_dieplayer(function(player)
 	--Removes the player from the playerlist.
-	if game = 1
-		local x = 1
-		while not player:get_player_name() == playingplayers[x] or x > table.getn(playingplayers)
-			x = x + 1
-		end
-		table.remove(playingplayers, x)
-	end
+	playingplayers[player:get_player_name()] = nil
 end)
