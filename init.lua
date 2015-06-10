@@ -7,13 +7,13 @@ minetest.register_privilege(
 minetest.register_node(
 	"mbBlock",
 	{
-		diggable = true
+		diggable = true,
 		can_dig = function(pos, player)
 			if minetest.check_player_privs(player, {micromine}) then
 				return true
 			else
 				return false
 			end
-		end
+		end,
 		walkable = true
 	})
